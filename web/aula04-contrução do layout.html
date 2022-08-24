@@ -5,16 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TABELA</title>
+    <style>
+        table{
+            borger
+        }
+    </style>
 </head>
 <body>
-    <table border="5px">
-        <tr>
-            <td>A</td>
+    <table border="5px" bgcolor="green" cellspacing="10px" cellpadding="10px" width="110px">
+        <tr >
+            <td bgcolor="blue">A</td>
             <td>B</td>
             <td>C</td>
             <td>E</td>
         </tr>
-        <tr>
+        <tr bgcolor = "yellow">
             <td>C</td>
             <td>D</td>
             <td>C</td>
@@ -29,11 +34,28 @@
     </table>
     <table border="5px">
         <tr>
-            <td colspan="2">A</td>
+            <td colspan="4">A</td>
         </tr>
         <tr>
             <td>B</td>
             <td>C</td>
+            <td>D</td>
+            <td>E</td>
+        </tr>
+    </table>
+    <table border="5px">
+        <tr>
+            <td rowspan="2">A</td>
+            <td>B</td>
+            
+        </tr>
+        <tr>
+            <td>c</td>
+            <td>D</td>
+            
+        </tr>
+        <tr>
+            <td>E</td>
         </tr>
     </table>
 </body>
