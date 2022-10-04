@@ -49,9 +49,9 @@
     <nav>
         <table align="center">
             <tr align="center">
-                <td bgcolor="#3040BB" width="110" ><a href="INICIAL.html" id="area" onmouseenter="entrar()" onmouseout="">INICIAL</a></td>
-                <td bgcolor="#3040BB" width="110"><a href="lentes.html" id="area2" onmouseenter="entrar2()">LENTES</a></td>
-                <td bgcolor="#3040BB" width="110"><a href="armações.html" id="area3" onmouseenter="entrar3()">ARMAÇÕES</a></td>
+                <td bgcolor="#3040BB" width="110" ><a href="INICIAL.html" id="area" onmouseenter="entrar()" onmouseout="sair()">INICIAL</a></td>
+                <td bgcolor="#3040BB" width="110"><a href="lentes.html" id="area2" onmouseenter="entrar2() "onmouseout="sair2()">LENTES</a></td>
+                <td bgcolor="#3040BB" width="110"><a href="armações.html" id="area3" onmouseenter="entrar3()" onmouseout="sair3()" >ARMAÇÕES</a></td>
                 <td bgcolor="#3040BB" width="110"><a href="compras.html" id="area4" onmouseenter="entrar4()">COMPRAS</a></td>
             </tr>
         </table>
@@ -70,22 +70,44 @@
     </table>
     <script>
         function entrar(){
-            var b = window.document.getElementById("area")
-            b.style.color="red"
+            var b1 = window.document.getElementById("area")
+            b1.style.color="red"
         }
+        function sair(){
+            var b1 = window.document.getElementById("area")
+            b1.style.color="#FFFF00"
+        }
+        
+    </script>
+    <script>
         function entrar2(){
-            var b = window.document.getElementById("area2")
-            b.style.color="red"
+            var b2 = window.document.getElementById("area2")
+            b2.style.color="red"
         }
+        function sair2(){
+            var b2 = window.document.getElementById("area2")
+            b2.style.color="#FFFF00"
+        }
+    </script>
+    <script>
         function entrar3(){
-            var b = window.document.getElementById("area3")
-            b.style.color="red"
+            var b3 = window.document.getElementById("area3")
+            b3.style.color="red"
         }
+        function sair3(){
+            var b3 = window.document.getElementById("area3")
+            b3.style.color="#FFFF00"
+        }
+    </script>
+    <script>
         function entrar4(){
-            var b = window.document.getElementById("area4")
-            b.style.color="red"
+            var b4 = window.document.getElementById("area4")
+            b4.style.color="red"
         }
-
+        function sair4(){
+            var b4 = window.document.getElementById("area4")
+            b4.style.color="#FFFF00"
+        }
     </script>
 
     
