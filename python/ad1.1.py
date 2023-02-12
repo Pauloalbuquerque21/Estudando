@@ -1,0 +1,1 @@
+entrada=input(int('Digite um número:'))
