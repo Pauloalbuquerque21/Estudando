@@ -19,7 +19,7 @@
 #    impostoRenda = salario*0.15
 #    print('Valor do INPS:',inps,"e do imposto de Renda",impostoRenda)
 #-------------- Condições Compostas ------------------------------
-valor = int(input('Digite um valor:'))
+valor = int(input('1Digite um valor:'))
 #if (valor >= 10)and(valor <= 20):
 #    print(valor,"Ocorre dentro do intervalo[10,20]")
 #or
@@ -29,7 +29,4 @@ valor = int(input('Digite um valor:'))
 #    print(valor,'Ocorre fora do intervalo[0,30]')
 
 #ESTRUTURA DE SELEÇÃO COM DOIS RAMOS (if - else)
- if valor > 0 :
-    print(valor,'É maior')
-
 
