@@ -28,12 +28,15 @@ while True:
     else:
         if len(entrada)==0 and numero == 0 and vezes == 0:
            print('Nenhum número foi lido - A primeira linha lida foi vazia')
-           break 
+           break
+        elif len(entrada)==0 and numero == 0 and vezes != 0:
+            print('Nenhum número foi lido')
+            break 
         else:
-            print('Média:%.2f\nMaior número:%d\nMenor número:%d'%(media,maior,menor))
+            print('Média:%.2f, Maior número:%d e Menor número:%d'%(media,maior,menor))
             break
         
         
-#print('Média:%.2f\nMaior número:%d\nMenor número:%d'%(media,maior,menor))
+
 
         
