@@ -1,5 +1,5 @@
 entrada = 0
-
+numero = 0
 resultado=0
 vezes=0
 media = 0
@@ -33,7 +33,6 @@ while True:
             break
         
         
-print('Média:',media,'Maior número:',maior,'Menor número:',menor)
-
+print('Média:%.1f\nMaior número:%d\nMenor número:%d'%(media,maior,menor))
 
         
