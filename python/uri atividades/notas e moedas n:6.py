@@ -2,6 +2,9 @@ valor=float(input('Digite um valor com duas casas decimais:'))
 quanti100 = 0
 quanti50 = 0
 quanti20 = 0
+quanti10 = 0
+quanti5 = 0
+quanti2 = 0
 while True:
     if valor >= 100:
         valor = valor - 100
@@ -19,12 +22,13 @@ while True:
         valor = valor - 5
         quanti5 = quanti5 + 1
     elif valor >= 2:
-        
+        valor = valor -2
+        quanti2 = quanti2 + 1 
     else:
         print('Fim')
         print(valor)
         break
 
-print(quanti100,quanti50,)
+print(f'NOTAS:\n{quanti100} notas(s) de R$ 100,00\n{} notas(s) de R$ 50,00\n{} notas(s) de 20,00\n{} notas(s) de 10,00\n{} nota(s) de 5,00\n{} nota(s) 2,00')
 
     
