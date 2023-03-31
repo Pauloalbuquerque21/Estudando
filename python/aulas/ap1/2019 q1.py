@@ -55,6 +55,6 @@ if candidato == '9' and v0 != 0:
     print(f'Candidato 9 obteve {v9}')
     
 
-print(f'Candidato 0 obteve {v0}\nCandidato 1 obteve {v1}\nCandidato 2 obteve {v2}\nCandidato 3 obteve {v3}\nCandidato 4 obteve {v4}\nCandidato 5 obteve {v5}\nCandidato 6 obteve {v7}\nCandidato 7 obteve {v7}\nCandidato 8 obteve {v8}\nCandidato 9 obteve {v9}\n')
+#print(f'Candidato 0 obteve {v0}\nCandidato 1 obteve {v1}\nCandidato 2 obteve {v2}\nCandidato 3 obteve {v3}\nCandidato 4 obteve {v4}\nCandidato 5 obteve {v5}\nCandidato 6 obteve {v7}\nCandidato 7 obteve {v7}\nCandidato 8 obteve {v8}\nCandidato 9 obteve {v9}\n')
 
         
