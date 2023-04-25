@@ -12,3 +12,4 @@ print('Listagem dos Pontos Lidos:')
 for c in range(0,len(lista)):
     print(f'({lista[c]})\n')
 print('Fim da listagem')
+print(f'{lista}')
