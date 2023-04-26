@@ -1,5 +1,4 @@
 import math
-
 def ler_pontos_arquivo(nome_arquivo):
     pontos = []
     with open(nome_arquivo, 'r') as arquivo:
@@ -9,7 +8,6 @@ def ler_pontos_arquivo(nome_arquivo):
                 coordenadas = list(map(int, linha.split()))
                 pontos.append(coordenadas)
     return pontos
-
 def pontos_dentro_da_esfera(pontos, centro, raio):
     pontos_dentro = []
     for ponto in pontos:
