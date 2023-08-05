@@ -1,8 +1,10 @@
-pares = impares = quantpares = quantimpares = maior = menor = 0
+pares = quant = impares = quantpares = quantimpares = maior = menor = 0
 while True:
     quant += 1
-    valores = int(input(f'Digite {c}° número inteiros:'))
-    if c == 1:
+    valores = input(f'Digite {quant}° número inteiros:')
+    if len(valores) == 0:
+        break
+    if quant == 1:
         maior = valores
         menor = valores
     else:
