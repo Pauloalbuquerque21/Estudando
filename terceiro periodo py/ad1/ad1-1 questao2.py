@@ -1,22 +1,30 @@
-pares = quant = impares = quantpares = quantimpares = maior = menor = 0
+pares = quant = dado = impares = quantpares = quantimpares = maior = menor = 0
 while True:
-    try:
-        quant += 1
-        valores = int(input(f'Digite {quant}° número inteiros:'))
+    quant += 1
+    valores = input(f'Digite um número inteiros:')
+    if len(valores) == 0:
+        break
+    else:
+        dado = int(valores)
         if quant == 1:
-            maior = valores
-            menor = valores
+            maior = dado
+            menor = dado
         else:
-            if valores > maior:
-                maior = valores
-            if valores < menor:
-                menor = valores
-        if valores % 2 == 0:
-            pares = valores + pares
+            if dado > maior:
+                maior = dado
+            if dado < menor:
+                menor = dado
+        if dado % 2 == 0:
+            pares = dado + pares
             quantpares += 1
         else:
-            impares = valores + impares
+            impares = dado + impares
             quantimpares += 1
-        print(f'Menor:{menor}\nMaior{maior}\nMédia dos pares:{pares / quantpares:.2f}\nMédia dos impares:{impares / quantimpares:.3f}')
-    except:
-        break
+
+print(f'Menor:{menor}\nMaior{maior}\nMédia dos pares:{pares/quantpares:.2f}\nMédia dos impares:{impares/quantimpares:.3f}')
+
+
+
+
+
+
