@@ -1,4 +1,5 @@
-pares = impares = quantpares = quantimpares = maior = menor = 0
+pares = impares = maior = menor = 0
+quantpares = quantimpares = 0
 quant = int(input('Quantos número o senhor digitará:'))
 for c in range(1,quant+1):
     valores = int(input(f'Digite {c}° número inteiros:'))
@@ -16,5 +17,5 @@ for c in range(1,quant+1):
     else:
         impares = valores + impares
         quantimpares += 1
-
-print(f'Menor:{menor}\nMaior{maior}\nMédia dos pares:{pares/quantpares:.2f}\nMédia dos impares:{impares/quantimpares:.3f}')
+print(f'{quantpares} e {quantimpares}')
+#print(f'Menor:{menor}\nMaior{maior}\nMédia dos pares:{pares/quantpares:.2f}\nMédia dos impares:{impares/quantimpares:.3f}')
