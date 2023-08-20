@@ -21,9 +21,15 @@ while True:
             impares = dado + impares
             quantimpares += 1
 
-print(f'Menor:{menor}\nMaior{maior}\nMédia dos pares:{pares/quantpares:.2f}\nMédia dos impares:{impares/quantimpares:.3f}')
-
-
+print(f'Menor:{menor}\nMaior:{maior}')
+if quantpares >= 1:
+    print(f'Media dos pares:{pares/quantpares:.2f}')
+else:
+    print(f'Media dos pares:{pares:.2f}')
+if quantimpares >= 1:
+    print(f'Media dos pares:{impares/quantimpares:.3f}')
+else:
+    print(f'Media dos impares:{impares:.3f}')
 
 
 
