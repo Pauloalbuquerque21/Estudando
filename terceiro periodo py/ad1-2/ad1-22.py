@@ -1,4 +1,5 @@
-permutacao = dado = list()
+permutacao = list()
+dado = list()
 test = 0
 def recebe(tamanho):
     quant = 0
@@ -6,6 +7,10 @@ def recebe(tamanho):
         inf = int(input(f'Digite o {quant + 1}° valor:'))
         if inf in dado:
             print('Valor digitádo já existe na permutação, favor tente novamente!')
+        elif inf >= tamanho:
+            print('número muito alto')
+        elif inf == 0:
+            print('Favor não digite zero')
         else:
             dado.append(inf)
             quant += 1
@@ -15,13 +20,13 @@ def recebe(tamanho):
 
 
 recebe(int(input('Digite o valor da permutação')))
-print(dado)
+print(f'{dado}')
 while True:
     if len(permutacao) == 0:
         permutacao.append(dado[0])
     else:
         test = len(permutacao)
         permutacao.append(dado[test])
-    if len(permutacao) == tamanho:
+    if len(permutacao) == len(dado):
         break
 print(f'{dado} e \n{permutacao}')
