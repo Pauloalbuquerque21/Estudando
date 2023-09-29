@@ -36,5 +36,15 @@ print(dados_das_matrizes)
 def leituraDeMatriz(dado):
     tamanho_matriz_a = dados_das_matrizes[0]
     tamanho_matriz_b = dados_das_matrizes[1]
+    matriz_A = matriz_B = list()
     if dado in 'aA':
-        for c range(0,tamanho_matriz_a):
+        for c in range(0,tamanho_matriz_a):
+            for c2 in range(0,len(dados_matriz[0])):
+                numb = int(dados_matriz[c][c2])
+                matriz_A.append(numb)
+        for c in range(0, tamanho_matriz_a):
+            for c2 in range(0,):
+    return matriz_A
+
+valoresA = leituraDeMatriz('a')
+print(valoresA)
