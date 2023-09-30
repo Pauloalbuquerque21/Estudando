@@ -29,7 +29,8 @@ for c in range(0,2):
                 #else:
                 #    dados_matriz.append(dados_divididos)
             #else:
-            dados_matriz.append(dados_divididos)
+            transform_num = int(dados_divididos)
+            dados_matriz.append(transform_num)
 print(dados_matriz)
 print(dados_das_matrizes)
 
