@@ -49,6 +49,62 @@ def leituraDeMatriz(dado):
         for c in range(tamanho_matriz_a,len(dados_matriz)):
             matriz_A.append(dados_matriz[c])
         return matriz_B
-escolha_matriz = input('Escolha a matriz desejada:')
-valoresA = leituraDeMatriz(escolha_matriz)
-print(valoresA)
+valoresB = leituraDeMatriz('b')
+valoresA = leituraDeMatriz('a')
+
+def mostraMatriz(informe_str,matriz_em_lista):
+    print(f'{a}:')
+    for c in range(0,len(b)):
+        print(b[c])
+        print()
+mostraMatriz('Matriz B',valoresB)
+
+def somaMatrizes(matriz_1,matriz_2):
+    matriz_result_soma = list()
+    test = list()
+    if len(a) == len(b) and len(a[0]) == len(b[0]):
+
+        for c1 in range(0,len(a)):
+            test = list()
+            for c2 in range(0,len(a[0])):
+                test.append(0)
+            matriz_result_soma.append(test)
+        for c1 in range(0,len(a)):
+            for c2 in range(0,len(a[0])):
+                soma = a[c1][c2] + b[c1][c2]
+                matriz_result_soma[c1][c2]=soma
+        result_soma = matriz_result_soma
+    else:
+        result_soma = 'Inexistente!!!'
+    return result_soma
+
+def multiplicaMatrizes(matriz_1,matriz_2):
+    mult = 0
+    matriz_result_mult = list()
+    if len(a[0]) == len(b):
+        for linhas in range(0,len(a)):
+            test = list()
+            for colunas in range(0,len(b[0])):
+                test.append(0)
+            matriz_result_mult.append(test)
+        for c in range(0,len(a)):
+            for c3 in range(0,len(b[0])):
+                result = 0
+                for c2 in range(0,len(a[0])):
+                    mult = a[c][c2] * b[c2][c3]
+                    result = mult + result
+                matriz_result_mult[c][c3] = result
+        result_mult = matriz_result_mult
+    else:
+        result_mult = 'Inexistente!!'
+    return result_mult
+
+
+
+
+valoresSoma = somaMatrizes(valoresB,valoresA)
+valoresMult = multiplicaMatrizes(valoresA,valoresB)
+print('Resultado da Soma:')
+print(valoresSoma)
+print('Resultado da multiplicação:')
+print(valoresMult)
