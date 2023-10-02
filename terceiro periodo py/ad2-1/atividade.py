@@ -34,7 +34,6 @@ for quant_matrizes in range(0,2):
 
 def leituraDeMatriz(dado):
     tamanho_matriz_a = dados_das_matrizes[0]
-    tamanho_matriz_b = dados_das_matrizes[1]
     matriz_A = matriz_B = list()
     if dado in 'aA':
         for c in range(0,tamanho_matriz_a):
