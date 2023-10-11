@@ -1,6 +1,3 @@
-
-with open('arquivo1.txt','r') as arquivo:
-    dados = arquivo.readline()
-print(dados)
-
-print(len(dados))
+dados = open("arquivo1.txt","r")
+dados2 = dados.read()
+print(dados2)
