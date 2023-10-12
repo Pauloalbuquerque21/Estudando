@@ -15,7 +15,7 @@ def multiplicaMatrizes(a,b):
                 result = 0
                 for c2 in range(0,len(a[0])):
                     mult = a[c][c2] * b[c2][c3]
-                result = mult + result
+                    result = mult + result
                 matriz_result_mult[c][c3] = result
         result_mult = matriz_result_mult
     else:
