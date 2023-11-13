@@ -11,8 +11,7 @@ def cosoante_vogais(lista):
     vogais = 0 
     for palavra in lista:
         for letra in palavra.upper():
-            if letra in ('AEIOU' or 'ÁÀÉÍÔU'):
-                
+            if letra in 'ÁÀÉÍÔU' or 'AEIOU':
                 vogais +=1
             else:
                 cosoantes += 1

@@ -1,4 +1,3 @@
-a = [1,2]
-print(len(a))
-#b = int(a)
-#print(b)
+a = 'à'
+b = a.upper()
+print(b)
