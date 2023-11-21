@@ -1,0 +1,3 @@
+Produto,Quantidade,Valor
+Iphone,10,30000
+Ipad,2,15000
