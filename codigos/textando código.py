@@ -1,10 +1,5 @@
-def dobrar(numero):
-    return numero * 2
+dados2 = '   casas da mae joana'
 
-numeros = [1, 2, 3, 4, 5]
+dado3 = dados2.split().strip()
 
-resultado = map(dobrar, numeros)
-resultado2 = list(resultado)
-print(resultado2)
-
-map
+print(dado3)
