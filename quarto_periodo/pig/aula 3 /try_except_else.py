@@ -17,7 +17,8 @@ def customization(a):
 while True:
     try:
         a = int(input('Digite o primeiro número:'))
-        customization(a)
+        b = int(input('Digite um outro valor:'))
+        c = a / b
     except(ZeroDivisionError):
         print('Digitou número zero')
     else:

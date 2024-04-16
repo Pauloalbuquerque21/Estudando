@@ -1,6 +1,8 @@
-try:
+try:  
+    a = 0
+    b = 10
     # Código que pode gerar uma exceção
-    resultado = 10 / 0  # Divisão por zero, gera uma exceção ZeroDivisionError
+    resultado = b / a  # Divisão por zero, gera uma exceção ZeroDivisionError
 except ZeroDivisionError:
     # Código a ser executado se ocorrer uma exceção do tipo ZeroDivisionError
     print("Erro: Divisão por zero!")
