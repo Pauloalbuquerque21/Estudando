@@ -5,11 +5,11 @@ quantidade = len(dados)
 print(dados)
 print(quantidade)
 numeros = list()
-fracao = list()
-for c1 in dados:
-    strings = c1.strip().split()
-    for str in strings:
-        
+for dado in dados:
+    lista_str = dado.strip().split()
+    print(lista_str)
+    fracao = list()
+    for str in lista_str:
         ints = int(str)
         fracao.append(ints)
     numeros.append(fracao)

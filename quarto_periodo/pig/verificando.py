@@ -109,3 +109,8 @@ print(obj.g(3))
 print(f'Segunda soma {p1.a}')
 print(obj.g(2))
 """
+letras = ['1','2']
+numeros = list()
+teste = int(letras)
+numeros.append(teste)
+print(numeros)
