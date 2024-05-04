@@ -1,0 +1,17 @@
+import tkinter as tk
+
+def mostrar_tecla_simbolica(event):
+    print("Tecla pressionada (keysym):", event.keysym)
+    txt=f"Tecla pressionada (keysym): {event.keysym}"
+    r.config(text=txt)
+
+janela_principal = tk.Tk()
+
+janela_principal.geometry("400x200")
+
+r = tk.Label(janela_principal)
+r.pack(side='bottom')
+
+janela_principal.bind("<Key>", mostrar_tecla_simbolica)
+
+janela_principal.mainloop()
