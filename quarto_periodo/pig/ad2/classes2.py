@@ -5,6 +5,7 @@ class suduko():
     def __str__(self):
         return f'{self.difficult}'
     
+    #cria a estrutura
     def suduku_pricipal(self):
         listas=[[],[],[],[],[],[],[],[],[]]
         for c in range(0,9):
@@ -20,6 +21,8 @@ class suduko():
         linha_maquina = 0
         vezes = 0
         valores_coluna = 0
+        primeira = 0 
+        resultado = 0 
 
         #loop do jogo:
         while True:
@@ -50,21 +53,32 @@ class suduko():
                     linha = linha_maquina
             #etapa que o jogador começa preencher as informações
             else:
-                horizontal_visual = ' '.join(horinzontal)
+                if primeira == 0:
+                    horizontal_visual = ' '.join(horinzontal)
 
-                print(f'   {horizontal_visual}')
-                print('  ------------------')
-                for c in range(0,9):
-                    hozontal_ventical = ' '.join(horinzontal)
-                    lista_visual = ' '.join(listas[c])
-                    print(f'{vertical[c]}| {lista_visual}')
+                    #print(f'   {horizontal_visual}')
+                    #print('  ------------------')
+                    lista_visual=[[],[],[],[],[],[],[],[],[]]
+                    for c in range(0,9):
+                        lista_visual[c] = ' '.join(listas[c])
+                    resultado = f'   {horizontal_visual}\n  ------------------\n{vertical[0]}| {lista_visual[0]}\n{vertical[1]}| {lista_visual[1]}\n{vertical[2]}| {lista_visual[2]}\n{vertical[3]}| {lista_visual[3]}\n{vertical[4]}| {lista_visual[4]}\n{vertical[5]}| {lista_visual[5]}\n{vertical[6]}| {lista_visual[6]}\n{vertical[7]}| {lista_visual[7]}\n{vertical[7]}| {lista_visual[7]}'
+                else:
+                    primeira +=1
                 #linha, coluna e valor que o usuário deseja
-                linha_usuario = int(input('Digite a linha:'))
-                coluna_usuario = int(input('Digite a coluna:'))
-                valor_usuario = str(input('digite o valor '))
-                linha = linha_usuario
-                coluna = coluna_usuario
-                valor = valor_usuario
+                    linha_usuario = int(input('Digite a linha:'))
+                    coluna_usuario = int(input('Digite a coluna:'))
+                    valor_usuario = str(input('digite o valor '))
+                    linha = linha_usuario
+                    coluna = coluna_usuario
+                    valor = valor_usuario
+                    horizontal_visual = ' '.join(horinzontal)
+
+                    #print(f'   {horizontal_visual}')
+                    #print('  ------------------')
+                    lista_visual=[[],[],[],[],[],[],[],[],[]]
+                    for c in range(0,9):
+                        lista_visual[c] = ' '.join(listas[c])
+                    resultado = f'   {horizontal_visual}\n  ------------------\n{vertical[0]}| {lista_visual[0]}\n{vertical[0]}| {lista_visual[0]}\n{vertical[1]}| {lista_visual[1]}\n{vertical[2]}| {lista_visual[2]}\n{vertical[3]}| {lista_visual[3]}\n{vertical[4]}| {lista_visual[4]}\n{vertical[5]}| {lista_visual[5]}\n{vertical[6]}| {lista_visual[6]}\n{vertical[7]}| {lista_visual[7]}\n{vertical[7]}| {lista_visual[7]}'
 
 
             #veriaveis:

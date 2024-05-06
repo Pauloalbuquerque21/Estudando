@@ -1,24 +1,22 @@
+import tkinter as tk
 
-"""
-def suduku_principal():
-        lista=[[],[],[],[],[],[],[],[],[]]
-        for c in range(0,9):
-            for c2 in range(0,9):
-                lista[c].append(".")
-        return lista
-listas = suduku_principal()
+def mostrar_texto():
+    texto_digitado = entrada.get()  # Obter o texto digitado pelo usuário
+    label_resultado.config(text="Texto digitado: " + texto_digitado)  # Atualizar o rótulo com o texto digitado
 
-horinzontal = ['0','1','2','3','4','5','6','7','8']
-vertical = [0,1,2,3,4,5,6,7,8]
+janela_principal = tk.Tk()
+janela_principal.title("Exemplo de Entry")
 
-horizontal_visual = ' '.join(horinzontal)
-print(f'   {horizontal_visual}')
-print('  ------------------')
-for c in range(0,9):
-    hozontal_ventical = ' '.join(horinzontal)
-    lista_visual = ' '.join(listas[c])
-    print(f'{vertical[c]}| {lista_visual}')
-"""
+# Criar um Entry
+entrada = tk.Entry(janela_principal, width=30)
+entrada.pack()
 
-lista=[0,1,2,3,4,5]
-print(len(lista))
+# Criar um botão para exibir o texto digitado
+botao = tk.Button(janela_principal, text="Mostrar Texto", command=mostrar_texto)
+botao.pack()
+
+# Criar um rótulo para exibir o texto digitado
+label_resultado = tk.Label(janela_principal, text="")
+label_resultado.pack()
+
+janela_principal.mainloop()

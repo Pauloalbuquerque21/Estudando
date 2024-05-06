@@ -1,4 +1,6 @@
 import random
+from tkinter import *
+
 class suduko():
     def __init__(self,difficult):
         self.difficult = difficult
@@ -21,6 +23,8 @@ class suduko():
         linha_maquina = 0
         vezes = 0
         valores_coluna = 0
+        primeira = 0 
+        resultado = 0 
 
         #loop do jogo:
         while True:
@@ -51,22 +55,22 @@ class suduko():
                     linha = linha_maquina
             #etapa que o jogador começa preencher as informações
             else:
-                horizontal_visual = ' '.join(horinzontal)
-
-                print(f'   {horizontal_visual}')
-                print('  ------------------')
-                for c in range(0,9):
-                    hozontal_ventical = ' '.join(horinzontal)
-                    lista_visual = ' '.join(listas[c])
-                    print(f'{vertical[c]}| {lista_visual}')
                 #linha, coluna e valor que o usuário deseja
+                horizontal_visual = '  '.join(horinzontal)
+
+                #print(f'   {horizontal_visual}')
+                #print('  ------------------')
+                lista_visual=[[],[],[],[],[],[],[],[],[]]
+                for c in range(0,9):
+                    lista_visual[c] = '  '.join(listas[c])
+                a.configure(text=f'   {horizontal_visual}\n  ------------------\n{vertical[0]}| {lista_visual[0]}\n{vertical[0]}| {lista_visual[0]}\n{vertical[1]}| {lista_visual[1]}\n{vertical[2]}| {lista_visual[2]}\n{vertical[3]}| {lista_visual[3]}\n{vertical[4]}| {lista_visual[4]}\n{vertical[5]}| {lista_visual[5]}\n{vertical[6]}| {lista_visual[6]}\n{vertical[7]}| {lista_visual[7]}\n{vertical[8]}| {lista_visual[8]}')
+
                 linha_usuario = int(input('Digite a linha:'))
                 coluna_usuario = int(input('Digite a coluna:'))
                 valor_usuario = str(input('digite o valor '))
                 linha = linha_usuario
                 coluna = coluna_usuario
                 valor = valor_usuario
-
 
             #veriaveis:
             confere_inferior = 0
@@ -165,9 +169,8 @@ class suduko():
                     print(f'resultado{resulta_suduko}')
 
             else:
-
-                print('-------Jogada errada---------')
                 if etapa == 1:
+                    print('-------Jogada errada---------')
                     erros +=1
                     if erros == 4:
                         break
@@ -208,5 +211,42 @@ class suduko():
                     self.difficult = str(input('Digite a Dificuldade, Sem acentuação[Facil,Medio e Dificil]:').strip().lower())
                         
                       
-            return result        
+            return result     
 
+def dificuldade():
+    global dificuldade2
+    #dificuldade
+    dificuldade1 = Label(janela_principal, text='Digite a dificuldade')
+    dificuldade1.pack(side='top')
+
+    dificuldade2 = Entry(janela_principal,width=30)
+    dificuldade2.pack(side='top')
+
+    botao = Button(janela_principal, text="Enter", command = botao_clicado )
+    botao.pack(side="top")
+
+def botao_clicado():
+    print(dificuldade2)
+    texto_dificuldade = dificuldade2.get()
+    
+    dificuldade = suduko(texto_dificuldade)
+    #Tela do jogo
+    a = Label(janela_principal,background='red', width=40, height=20 )
+    a.pack(side='top')
+
+    a.configure(text=f'Dificuldade selecionada:{dificuldade}')
+    lista=dificuldade.suduku_pricipal()
+    dificul = dificuldade.detect()
+    p1=dificuldade.suduko_usuario(lista,dificul)
+
+janela_principal = Tk()
+#TITULO
+janela_principal.title('SUDUKO')
+janela_principal.geometry("400x500")
+
+
+
+botao = Button(janela_principal, text="Iniciar o jogo", command = dificuldade )
+botao.pack(side="bottom")
+
+janela_principal.mainloop()
