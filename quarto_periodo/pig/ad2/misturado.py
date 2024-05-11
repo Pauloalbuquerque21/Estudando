@@ -219,25 +219,27 @@ def dificuldade():
     dificuldade1 = Label(janela_principal, text='Digite a dificuldade')
     dificuldade1.pack(side='top')
 
+    #Parte onde escrevemos.
     dificuldade2 = Entry(janela_principal,width=30)
     dificuldade2.pack(side='top')
 
-    botao = Button(janela_principal, text="Enter", command = botao_clicado )
-    botao.pack(side="top")
+    botao_dificuldade = Button(janela_principal, text="Enter", command = botao_clicado )
+    botao_dificuldade.pack(side="top")
 
 def botao_clicado():
-    print(dificuldade2)
+    #Atribuir o valor do Entry no texto_dificuldade
     texto_dificuldade = dificuldade2.get()
     
     dificuldade = suduko(texto_dificuldade)
+
     #Tela do jogo
     a = Label(janela_principal,background='red', width=40, height=20 )
     a.pack(side='top')
 
-    a.configure(text=f'Dificuldade selecionada:{dificuldade}')
     lista=dificuldade.suduku_pricipal()
     dificul = dificuldade.detect()
-    p1=dificuldade.suduko_usuario(lista,dificul)
+    print(f'{lista},{dificul}')
+    dificuldade.suduko_usuario(lista,dificul)
 
 janela_principal = Tk()
 #TITULO
