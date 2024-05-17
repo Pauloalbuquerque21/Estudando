@@ -1,5 +1,4 @@
 import random
-from tkinter import *
 #from home2 import a
 class suduko():
     def __init__(self,difficult):
@@ -52,54 +51,23 @@ class suduko():
                     linha = linha_maquina
             #etapa que o jogador começa preencher as informações
             else:
-
-                #tela do jogo, com tkinter
-                white = Label(janela_principal,background='white', width=40, height=20)
-                white.pack(side='top')
-
                 horizontal_visual = ' '.join(horinzontal)
 
                 print(f'   {horizontal_visual}')
                 print('  ------------------')
-                texto = f'   {horizontal_visual}\n   ------------------\n'
+                
                 for c in range(0,9):
-                    hozontal_ventical = '  '.join(horinzontal)
-                    lista_visual = '  '.join(listas[c])
-                    texto+=f'{vertical[c]}| {lista_visual}\n'
+                    hozontal_ventical = ' '.join(horinzontal)
+                    lista_visual = ' '.join(listas[c])
+                    print(f'{vertical[c]}| {lista_visual}')
                 
-                white.config(text=texto)
-                #interface dos botões interativos 
-                entry()
-                
-                def entry():
-                    global Entry_linha, Entry_coluna, Entry_valor
-                    Entry_linha = Entry(janela_principal, width=30 )
-                    Entry_linha.pack(side="top")
-
-                    Entry_coluna = Entry(janela_principal, width=30 )
-                    Entry_coluna.pack(side="top")
-
-                    Entry_valor = Entry(janela_principal, width=30 )
-                    Entry_valor.pack(side="top")
-
-                    botao_ativar = Button(janela_principal, text='Enter', command=valores)
-                    botao_ativar.pack(side="bottom")
-                
-
-                def valores():
-                    global linha,coluna,valor
-                    texto_linha = Entry_linha.get()
-                    texto_coluna = Entry_coluna.get()
-                    texto_valor = Entry_valor.get()
-                    #linha, coluna e valor que o usuário deseja
-                    linha_usuario = int(texto_linha)
-                    coluna_usuario = int(texto_coluna)
-                    valor_usuario = str(texto_valor)
-                
-                    linha = linha_usuario
-                    coluna = coluna_usuario
-                    valor = valor_usuario
-                    white.pack_forget()
+                #linha, coluna e valor que o usuário deseja
+                linha_usuario = int(input('Digite a linha:'))
+                coluna_usuario = int(input('Digite a coluna:'))
+                valor_usuario = str(input('digite o valor '))
+                linha = linha_usuario
+                coluna = coluna_usuario
+                valor = valor_usuario
 
 
             #veriaveis:
@@ -242,74 +210,3 @@ class suduko():
                         
                       
             return result        
-
-
-from tkinter import *
-#print('-+'*20)
-#print(f'SUDOKO'.center(20))
-#print('-+'*20)
-#print('Regra:\nvocê só tem direito de 3 erros.\nFavor digitar as linhas e colunas de 0 até 8\nDigitar as dificuldade sem acentuação')
-
-
-#dificuldade = suduko(str(input('Digite a Dificuldade, Sem acentuação[Facil,Medio e Dificil]:').strip().lower()))
-#print(f'Dificuldade selecionada:{dificuldade}')
-#lista=dificuldade.suduku_pricipal()
-#dificul = dificuldade.detect()
-#dificuldade.suduko_usuario(lista,dificul)
-
-
-def dificuldade():
-    global dificuldade2, dificuldade1, botao_dificuldade
-    #apagar o label infor
-    infor.pack_forget()
-    botao.pack_forget()
-    #dificuldade
-    dificuldade1 = Label(janela_principal, text='Digite a dificuldade')
-    dificuldade1.pack(side='top')
-
-    #Parte onde escrevemos.
-    dificuldade2 = Entry(janela_principal,width=30)
-    dificuldade2.pack(side='top')
-
-    botao_dificuldade = Button(janela_principal, text="Enter", command = botao_clicado )
-    botao_dificuldade.pack(side="top")
-
-def botao_clicado():
-    global a
-    #Atribuir o valor do Entry no texto_dificuldade
-    texto_dificuldade = dificuldade2.get()
-    
-    dificuldade = suduko(texto_dificuldade)
-
-    #apagar o dificuldade1,dificuldade2 e voão
-    dificuldade1.pack_forget()
-    dificuldade2.pack_forget()
-    botao_dificuldade.pack_forget()
-
-    #Tela do jogo
-
-    #a.configure(text='test')
-
-    lista=dificuldade.suduku_pricipal()
-    dificul = dificuldade.detect()
-    #print(f'{lista},{dificul}')
-    dificuldade.suduko_usuario(lista,dificul)
-
-    
-
-janela_principal = Tk()
-
-#TITULO
-janela_principal.title('SUDUKO')
-janela_principal.geometry("400x500")
-
-
-#labels
-infor = Label(janela_principal, text='Regra:\nvocê só tem direito de 3 erros.\nFavor digitar as linhas e colunas de 0 até 8\nDigitar as dificuldade sem acentuação',background='white')
-infor.pack(side='top')
-
-botao = Button(janela_principal, text="Iniciar o jogo", command = dificuldade )
-botao.pack(side="bottom")
-
-janela_principal.mainloop()
-
